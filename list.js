@@ -1,5 +1,5 @@
 var httpRequest = new XMLHttpRequest();
-var api = "https://www.reddit.com/r/dogpictures.json";
+var api = "https://www.reddit.com/r/PuppySmiles.json";
 
 httpRequest.open("GET", api);
 httpRequest.send();
@@ -18,7 +18,7 @@ function processRequest(e) {
             document.body.appendChild(heading);
 
             var link = document.createElement('a');
-            link.setAttribute('href', 'single.html', + '?url=' + posts[i].data.url);
+            link.setAttribute('href', 'single.html?url=https://www.reddit.com' + posts[i].data.permalink);
             link.style.width = '200px';
             document.body.appendChild(link);
             link.appendChild(heading);
